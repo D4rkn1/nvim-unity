@@ -150,7 +150,7 @@ public class NeovimCodeEditor : IExternalCodeEditor
     if (column == -1)
       column = 0;
 
-    var arguments = $"--server /tmp/nvimsocket --remote {filePath}";
+    var arguments = $"--server /tmp/nvimsocket --remote {filePath} --remote-send ':{line}<CR>'";
     Debug.Log("arguments");
     Debug.Log(arguments);
 
