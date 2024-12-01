@@ -150,7 +150,7 @@ public class NeovimCodeEditor : IExternalCodeEditor
     if (column == -1)
       column = 0;
 
-    var arguments = $"--server /tmp/nvimsocket --remote-send ':e +{line} {filePath}<CR>'";
+    var arguments = $"--server /tmp/nvim-unity.pipe --remote-send ':e +{line} {filePath}<CR>'";
 
     // if (Arguments != DefaultArgument)
     // {
